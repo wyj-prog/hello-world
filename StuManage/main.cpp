@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
     std::fstream read1;
     read1.open("a");
     if (!read1) {
-        std::cout << "Î´ÄÜ³É¹¦´ò¿ªÎÄ¼þ£¬Çë¼ì²éÑ§ÉúÐÅÏ¢ÎÄ¼þÊÇ·ñ´æÔÚ£¡" << std::endl;
+        std::cout << "æœªèƒ½æˆåŠŸæ‰“å¼€æ–‡ä»¶ï¼Œè¯·æ£€æŸ¥å­¦ç”Ÿä¿¡æ¯æ–‡ä»¶æ˜¯å¦å­˜åœ¨ï¼" << std::endl;
         return -1;
     } else {
         readagain:
@@ -69,46 +69,46 @@ int main(int argc, char *argv[]) {
     }
 
     again:
-    std::cout << std::endl << "***»¶Ó­·ÃÎÊºÓ±±¹¤Òµ´óÑ§Ñ§Éú³É¼¨¹ÜÀíÏµÍ³***" << std::endl;
-    std::cout << "Powered by ÎäÓî½¡       Version 0.9.9" << std::endl;
-    std::cout << "[1] Î¬»¤Ñ§ÉúÐÅÏ¢" << std::endl << "[2] Î¬»¤¿Î³ÌÐÅÏ¢" << std::endl << "[3] Î¬»¤³É¼¨ÐÅÏ¢"
-    << std::endl << "[4] Êä³ö³É¼¨µ¥" << std::endl << "[5] Êä³ö¼¨µãÅÅÃû" << std::endl << "[6] ÍË³öÏµÍ³" << std::endl;
-    std::cout << "ÇëÑ¡ÔñÏàÓ¦µÄ¹¦ÄÜ£º ";
+    std::cout << std::endl << "***æ¬¢è¿Žè®¿é—®æ²³åŒ—å·¥ä¸šå¤§å­¦å­¦ç”Ÿæˆç»©ç®¡ç†ç³»ç»Ÿ***" << std::endl;
+    std::cout << "Powered by wyj       Version 0.9.9" << std::endl;
+    std::cout << "[1] ç»´æŠ¤å­¦ç”Ÿä¿¡æ¯" << std::endl << "[2] ç»´æŠ¤è¯¾ç¨‹ä¿¡æ¯" << std::endl << "[3] ç»´æŠ¤æˆç»©ä¿¡æ¯"
+    << std::endl << "[4] è¾“å‡ºæˆç»©å•" << std::endl << "[5] è¾“å‡ºç»©ç‚¹æŽ’å" << std::endl << "[6] é€€å‡ºç³»ç»Ÿ" << std::endl;
+    std::cout << "è¯·é€‰æ‹©ç›¸åº”çš„åŠŸèƒ½ï¼š ";
     float choice = 0;
     input1:
     std::cin >> choice;
     std::cin.get();
-    if (choice > 6 || choice <= 0|| int(choice)!=choice ){                                             //ÊäÈëÖ÷ÐòºÅ
-        std::cout << "ÊäÈëµÄÐòºÅÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡ ";
+    if (choice > 6 || choice <= 0|| int(choice)!=choice ){                                             //è¾“å…¥ä¸»åºå·
+        std::cout << "è¾“å…¥çš„åºå·æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼ ";
         goto input1;}
-    if (choice == 1 || choice == 2|| choice == 3) {                             //ÊäÈëÎ¬»¤µÄÐòºÅ
-        std::cout << "ÇëÑ¡Ôñ½øÒ»²½µÄ²Ù×÷£º[1]Ìí¼Ó [2]É¾³ý [3]ÐÞ¸Ä [4]²éÑ¯ ";
+    if (choice == 1 || choice == 2|| choice == 3) {                             //è¾“å…¥ç»´æŠ¤çš„åºå·
+        std::cout << "è¯·é€‰æ‹©è¿›ä¸€æ­¥çš„æ“ä½œï¼š[1]æ·»åŠ  [2]åˆ é™¤ [3]ä¿®æ”¹ [4]æŸ¥è¯¢ ";
         float temp = 0;
         input2:
         std::cin >> temp;
         std::cin.get();
         if (temp < 0||temp > 4|| int(temp)!=temp ) {
-            std::cout << "ÊäÈëµÄÐòºÅÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡ ";
+            std::cout << "è¾“å…¥çš„åºå·æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼ ";
             goto input2;
-        }else if(temp == 1) {                                                    //Ìí¼Ó
+        }else if(temp == 1) {                                                    //æ·»åŠ 
             if (choice == 1) {
                 tianjia1(students,read1);
                 goto readagain;
             }else
             if (choice == 2) tianjia2();else
             if (choice == 3) tianjia3();
-        }else if (temp == 2){                                                    //É¾³ý
+        }else if (temp == 2){                                                    //åˆ é™¤
             if (choice == 1) {
                 delete1(students,read1);
                 goto readagain;
             }else
             if (choice == 2) delete2();else
             if (choice == 3) delete3();
-        }else if (temp ==3){                                                     //ÐÞ¸Ä
+        }else if (temp ==3){                                                     //ä¿®æ”¹
             if (choice == 1) modify1();else
             if (choice == 2) modify2();else
             if (choice == 3) modify3();
-        }else if(temp == 4){                                                    //²éÑ¯
+        }else if(temp == 4){                                                    //æŸ¥è¯¢
             if (choice == 1) lookup1();else
             if (choice == 2) lookup2();else
             if (choice == 3) lookup3();
@@ -119,7 +119,7 @@ int main(int argc, char *argv[]) {
     }else if (choice == 5){
         Rankings();
     }else if (choice == 6){
-            std::cout << "¸ÐÐ»ÄúµÄÊ¹ÓÃ£¬×£ÄúÉú»îÓä¿ì£¬ÆÚ´ýÄúÏÂ´ÎÊ¹ÓÃ£¬ÔÙ¼û£¡" << std::endl;
+            std::cout << "æ„Ÿè°¢æ‚¨çš„ä½¿ç”¨ï¼Œç¥æ‚¨ç”Ÿæ´»æ„‰å¿«ï¼ŒæœŸå¾…æ‚¨ä¸‹æ¬¡ä½¿ç”¨ï¼Œå†è§ï¼" << std::endl;
             std::cout << "Press any key to continue......";
             std::string temp;
             std::getline(std::cin,temp);
@@ -156,14 +156,14 @@ void readClassInfo(std::ifstream &open1){
 
 void tianjia1(Stuinformation (&students)[100],std::fstream &read1){
     retry:
-        std::cout << "ÇëÊäÈëÑ§ºÅ£º";
+        std::cout << "è¯·è¾“å…¥å­¦å·ï¼š";
         {
             std::string xuehao;
             loop:
             std::getline(std::cin, xuehao);
             for (int i = 0; students[i].StuNum != "\000"; i++){
                 if (xuehao == students[i].StuNum){
-                    std::cout << "Ñ§ºÅ²»ÄÜÓÐÖØ¸´£¬ÇëÖØÐÂÊäÈë£¡";
+                    std::cout << "å­¦å·ä¸èƒ½æœ‰é‡å¤ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                     goto loop;
                 }
 
@@ -172,26 +172,26 @@ void tianjia1(Stuinformation (&students)[100],std::fstream &read1){
             read1.open("a",std::fstream::app);
             read1 << xuehao << std::endl;
         }
-        std::cout << "ÇëÊäÈëÐÕÃû£º";
+        std::cout << "è¯·è¾“å…¥å§“åï¼š";
         {
             std::string Name;
             std::getline(std::cin, Name);
             read1 << Name << std::endl;
         }
-        std::cout << "ÇëÊäÈë°à¼¶£º";
+        std::cout << "è¯·è¾“å…¥ç­çº§ï¼š";
         {
             std::string Class;
             std::getline(std::cin, Class);
             read1 << Class << std::endl;
         }
-        std::cout << "ÇëÊäÈëÐÔ±ð£¨Ìîm»òÕßf£©£º";
+        std::cout << "è¯·è¾“å…¥æ€§åˆ«ï¼ˆå¡«mæˆ–è€…fï¼‰ï¼š";
         {
             char Sex;
             std::cin >> Sex;
             std::cin.get();
             read1 << Sex << std::endl;
         }
-        std::cout << "ÇëÊäÈë×¨Òµ£º";
+        std::cout << "è¯·è¾“å…¥ä¸“ä¸šï¼š";
         {
             std::string Major;
             std::getline(std::cin, Major);
@@ -204,7 +204,7 @@ void tianjia1(Stuinformation (&students)[100],std::fstream &read1){
 
 void delete1(Stuinformation (&students)[100],std::fstream &output){
     again:
-        std::cout << "ÇëÊäÈëÒªÉ¾³ýµÄÍ¬Ñ§µÄÑ§ºÅ£º";
+        std::cout << "è¯·è¾“å…¥è¦åˆ é™¤çš„åŒå­¦çš„å­¦å·ï¼š";
         std::string num1;
         std::cin >> num1;
         std::cin.get();
@@ -223,7 +223,7 @@ void delete1(Stuinformation (&students)[100],std::fstream &output){
             }
         }
     if (State == 0)
-    {std::cout << "Î´ÕÒµ½¸ÃÑ§ºÅ£¬ÇëÖØÐÂÊäÈë£¡" << std::endl;
+    {std::cout << "æœªæ‰¾åˆ°è¯¥å­¦å·ï¼Œè¯·é‡æ–°è¾“å…¥ï¼" << std::endl;
     goto again;}
     output.close();
     std::ofstream output1("a");
@@ -252,47 +252,47 @@ void modify1(){
         std::getline(open1,students[i].StuMajor);
     }
     again:
-    std::cout << "ÇëÊäÈëÏëÒªÐÞ¸ÄµÄÍ¬Ñ§µÄÑ§ºÅ£º";
+    std::cout << "è¯·è¾“å…¥æƒ³è¦ä¿®æ”¹çš„åŒå­¦çš„å­¦å·ï¼š";
     std::string num1;
     std::cin >> num1;
     std::cin.get();
     for (int i = 0; students[i].StuNum != "\000"; i++){
         if (students[i].StuNum == num1){
-            std::cout << "ÕÒµ½¸ÃÍ¬Ñ§£¬ÇëÑ¡ÔñÒªÐÞ¸ÄµÄÄÚÈÝ£º[1]Ñ§ºÅ [2]ÐÕÃû [3]°à¼¶ [4]ÐÔ±ð [5]×¨Òµ";
+            std::cout << "æ‰¾åˆ°è¯¥åŒå­¦ï¼Œè¯·é€‰æ‹©è¦ä¿®æ”¹çš„å†…å®¹ï¼š[1]å­¦å· [2]å§“å [3]ç­çº§ [4]æ€§åˆ« [5]ä¸“ä¸š";
             int k;
             input:
             std::cin >> k;
             std::cin.get();
             if (k < 1||k > 5){
-                std::cout << "ÐòºÅ´íÎó£¬ÇëÖØÐÂÊäÈë£¡";
+                std::cout << "åºå·é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                 goto input;
             }
             std::string neww;
             switch (k) {
                 case 1:
-                    std::cout << "ÇëÊäÈëÐÂÄÚÈÝ£º";
+                    std::cout << "è¯·è¾“å…¥æ–°å†…å®¹ï¼š";
                     std::getline(std::cin,neww);
                     students[i].StuNum = neww;
                     break;
                 case 2:
-                    std::cout << "ÇëÊäÈëÐÂÄÚÈÝ£º";
+                    std::cout << "è¯·è¾“å…¥æ–°å†…å®¹ï¼š";
                     std::getline(std::cin,neww);
                     students[i].StuName = neww;
                     break;
                 case 3:
-                    std::cout << "ÇëÊäÈëÐÂÄÚÈÝ£º";
+                    std::cout << "è¯·è¾“å…¥æ–°å†…å®¹ï¼š";
                     std::getline(std::cin,neww);
                     students[i].StuClass = neww;
                     break;
                 case 4:
-                    std::cout << "ÇëÊäÈëÐÂÄÚÈÝ(m or f):";
+                    std::cout << "è¯·è¾“å…¥æ–°å†…å®¹(m or f):";
                     char ii;
                     std::cin >> ii;
                     std::cin.get();
                     students[i].StuSex = ii;
                     break;
                 case 5:
-                    std::cout << "ÇëÊäÈëÐÂÄÚÈÝ£º";
+                    std::cout << "è¯·è¾“å…¥æ–°å†…å®¹ï¼š";
                     std::getline(std::cin,neww);
                     students[i].StuMajor = neww;
                     break;
@@ -308,9 +308,9 @@ void modify1(){
             }
             output.close();
             return ;
-        }else std::cout << "ËÑË÷ÖÐ..." << std::endl;
+        }else std::cout << "æœç´¢ä¸­..." << std::endl;
     }
-    std::cout << "Ã»ÕÒµ½¹þ,ÊÇ·ñÏëÖØÐÂÊäÈë£¿£¨Y»òÕßN£©" ;
+    std::cout << "æ²¡æ‰¾åˆ°å“ˆ,æ˜¯å¦æƒ³é‡æ–°è¾“å…¥ï¼Ÿï¼ˆYæˆ–è€…Nï¼‰" ;
     char c;
     std::cin >> c;
     std::cin.get();
@@ -333,34 +333,34 @@ void lookup1(){
         std::getline(open1,students[i].StuMajor);
     }
     again:
-    std::cout << "ÇëÊäÈëÏëÒª²éÑ¯µÄÍ¬Ñ§µÄÑ§ºÅ£º";
+    std::cout << "è¯·è¾“å…¥æƒ³è¦æŸ¥è¯¢çš„åŒå­¦çš„å­¦å·ï¼š";
     std::string num1;
     std::cin >> num1;
     std::cin.get();
     for (int i = 0; students[i].StuNum != "\000"; i++){
         if (students[i].StuNum == num1){
-            std::cout << "ÕÒµ½¸ÃÍ¬Ñ§" << std::endl;
-                    std::cout << std::endl << "Ñ§ºÅ£º" << students[i].StuNum;
+            std::cout << "æ‰¾åˆ°è¯¥åŒå­¦" << std::endl;
+                    std::cout << std::endl << "å­¦å·ï¼š" << students[i].StuNum;
 
-                    std::cout << std::endl << "ÐÕÃû: " << students[i].StuName;
+                    std::cout << std::endl << "å§“å: " << students[i].StuName;
 
-                    std::cout << std::endl << "°à¼¶£º" << students[i].StuClass;
+                    std::cout << std::endl << "ç­çº§ï¼š" << students[i].StuClass;
 
-                    std::cout << std::endl << "ÐÔ±ð£º" ;
-            if (students[i].StuSex == 'm') std::cout << "ÄÐ";
-            else std::cout << "Å®";
+                    std::cout << std::endl << "æ€§åˆ«ï¼š" ;
+            if (students[i].StuSex == 'm') std::cout << "ç”·";
+            else std::cout << "å¥³";
 
-                    std::cout << std::endl << "×¨Òµ£º" << students[i].StuMajor << std::endl <<std::endl;
+                    std::cout << std::endl << "ä¸“ä¸šï¼š" << students[i].StuMajor << std::endl <<std::endl;
             open1.close();
-            std::cout << "Çë°´»Ø³µ¼ü¼ÌÐø......";
+            std::cout << "è¯·æŒ‰å›žè½¦é”®ç»§ç»­......";
             std::string temp;
             std::getline(std::cin,temp) ;
-            return ; //½áÊøÔËÐÐ
-            }else std::cout << "ËÑË÷ÖÐ..." << std::endl;
+            return ; //ç»“æŸè¿è¡Œ
+            }else std::cout << "æœç´¢ä¸­..." << std::endl;
     }
 open1.close();
-    std::cout << "Ã»ÕÒµ½¹þ" << std::endl;
-    std::cout << "ÊÇ·ñÏëÖØÐÂÊäÈë£¿£¨Y»òÕßN£©" ;
+    std::cout << "æ²¡æ‰¾åˆ°å“ˆ" << std::endl;
+    std::cout << "æ˜¯å¦æƒ³é‡æ–°è¾“å…¥ï¼Ÿï¼ˆYæˆ–è€…Nï¼‰" ;
     char c;
     std::cin >> c;
     std::cin.get();
@@ -372,32 +372,32 @@ open1.close();
 void tianjia2(){
         std::fstream read1;
         read1.open("b", std::ofstream::app);
-            std::cout << "ÇëÊäÈë¿Î³ÌºÅ£º";
+            std::cout << "è¯·è¾“å…¥è¯¾ç¨‹å·ï¼š";
         {
             std::string xuehao;
             std::getline(std::cin,xuehao);
             read1 << xuehao << std::endl;
         }
-        std::cout << "ÇëÊäÈë¿Î³ÌÃû£º";
+        std::cout << "è¯·è¾“å…¥è¯¾ç¨‹åï¼š";
         {
             std::string Name;
             std::getline(std::cin,Name);
             read1 << Name << std::endl;
         }
-        std::cout << "ÇëÊäÈëÑ§·Ö£¨ÕûÊý£©£º";
+        std::cout << "è¯·è¾“å…¥å­¦åˆ†ï¼ˆæ•´æ•°ï¼‰ï¼š";
         {
             double Xuefen;
             std::cin >> Xuefen;
             std::cin.get();
             read1 << Xuefen << std::endl;
         }
-        std::cout << "ÇëÊäÈë¿Î³ÌÃèÊö£¨½öÏÞÒ»ÐÐ£¬ÒÔ»Ø³µ½áÊø£©£º";
+        std::cout << "è¯·è¾“å…¥è¯¾ç¨‹æè¿°ï¼ˆä»…é™ä¸€è¡Œï¼Œä»¥å›žè½¦ç»“æŸï¼‰ï¼š";
         {
             std::string description;
             std::getline(std::cin,description);
             read1 << description << std::endl;
         }
-        std::cout << "ÐÅÏ¢Â¼Èë³É¹¦£¬¼´½«·µ»ØÖ÷²Ëµ¥";
+        std::cout << "ä¿¡æ¯å½•å…¥æˆåŠŸï¼Œå³å°†è¿”å›žä¸»èœå•";
     read1.close();
     return ;
 }
@@ -415,35 +415,35 @@ void delete2(){
         std::getline(open1,classes[i].ClassDetail);
     }
     again:
-    std::cout << "Ï£ÍûÍ¨¹ýÄÇÖÖ·½Ê½²éÑ¯£¿[1]¿Î³ÌºÅ [2]¿Î³ÌÃû [3]Ñ§·Ö [4]¿Î³ÌÃèÊö :";
+    std::cout << "å¸Œæœ›é€šè¿‡é‚£ç§æ–¹å¼æŸ¥è¯¢ï¼Ÿ[1]è¯¾ç¨‹å· [2]è¯¾ç¨‹å [3]å­¦åˆ† [4]è¯¾ç¨‹æè¿° :";
     int t;
     std::cin >> t;
     std::cin.get();
     if (t<1||t>4){
-        std::cout << "ÊäÈëµÄÐòºÅÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+        std::cout << "è¾“å…¥çš„åºå·æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
     goto again;}else
-    std::cout << "ÇëÊäÈëÒªÉ¾³ýµÄ¿Î³ÌµÄ";
+    std::cout << "è¯·è¾“å…¥è¦åˆ é™¤çš„è¯¾ç¨‹çš„";
     std::string thisisastr;
     int xuefen = 0;
     switch (t){
         case 1:
-            std::cout << "¿Î³ÌºÅ ";
+            std::cout << "è¯¾ç¨‹å· ";
             std::getline(std::cin,thisisastr);
             break;
 
         case 2:
-            std::cout << "¿Î³ÌÃû ";
+            std::cout << "è¯¾ç¨‹å ";
             std::getline(std::cin,thisisastr);
             break;
 
         case 3:
-            std::cout << "Ñ§·Ö ";
+            std::cout << "å­¦åˆ† ";
             std::cin >> xuefen;
             std::cin.get();
             break;
 
         case 4:
-            std::cout << "¿Î³ÌÃèÊö£¨½öÏÞÒ»ÐÐ£¬ÒÔ»Ø³µ½áÊø£©";
+            std::cout << "è¯¾ç¨‹æè¿°ï¼ˆä»…é™ä¸€è¡Œï¼Œä»¥å›žè½¦ç»“æŸï¼‰";
             std::getline(std::cin,thisisastr);
             break;
 
@@ -453,13 +453,13 @@ void delete2(){
         int i;
         for (i = 0; classes[i].ClassNO != "\000"; i++) {
             if (classes[i].ClassNO == thisisastr || classes[i].ClassDetail == thisisastr || classes[i].ClassName == thisisastr) {
-                std::cout << "ÕÒµ½·ûºÏÌõ¼þµÄ¿Î³Ì£¬ÊÇ·ñÒªÉ¾³ý£¿" << std::endl;
-                std::cout << "¿Î³ÌÃû£º" << classes[i].ClassName << std::endl << "¿Î³ÌºÅ£º" << classes[i].ClassNO << std:: endl <<
-                "¿Î³ÌÃèÊö£º" << classes[i].ClassDetail << std::endl <<
-                "Ñ§·Ö£º" << classes[i].ClassScore << std::endl;
+                std::cout << "æ‰¾åˆ°ç¬¦åˆæ¡ä»¶çš„è¯¾ç¨‹ï¼Œæ˜¯å¦è¦åˆ é™¤ï¼Ÿ" << std::endl;
+                std::cout << "è¯¾ç¨‹åï¼š" << classes[i].ClassName << std::endl << "è¯¾ç¨‹å·ï¼š" << classes[i].ClassNO << std:: endl <<
+                "è¯¾ç¨‹æè¿°ï¼š" << classes[i].ClassDetail << std::endl <<
+                "å­¦åˆ†ï¼š" << classes[i].ClassScore << std::endl;
                 char t;
                 choose:
-                std::cout << "ÇëÑ¡Ôñ£¨ÊäÈëY»òN£©:";
+                std::cout << "è¯·é€‰æ‹©ï¼ˆè¾“å…¥Yæˆ–Nï¼‰:";
                 std::cin >> t;
                 std::cin.get();
                 if(t == 'N'){
@@ -474,7 +474,7 @@ void delete2(){
                     }
                     output.close();
                 }else if(t != 'Y'){
-                    std::cout << "ÄúÊäÈëµÄ×ÖÄ¸ÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+                    std::cout << "æ‚¨è¾“å…¥çš„å­—æ¯æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                     goto choose;
                 }else {
                     for (int count = i; classes[count].ClassNO != "\000"; count++) {
@@ -485,7 +485,7 @@ void delete2(){
                         State = 1;
                     }
                     i--;
-                    std::cout << "¿Î³Ì³É¹¦É¾³ý" << std::endl;
+                    std::cout << "è¯¾ç¨‹æˆåŠŸåˆ é™¤" << std::endl;
                 }
             }
         }
@@ -493,14 +493,14 @@ void delete2(){
         int i;
         for (i = 0; classes[i].ClassNO != "\000"; i++) {
             if (classes[i].ClassScore == xuefen) {
-                std::cout << "ÕÒµ½·ûºÏÌõ¼þµÄ¿Î³Ì£¬ÊÇ·ñÒªÉ¾³ý£¿" << std::endl;
-                std::cout << "¿Î³ÌºÅ£º" << classes[i].ClassNO << std::endl <<
-                          "¿Î³ÌÃû£º" << classes[i].ClassName << std::endl <<
-                          "¿Î³ÌÃèÊö£º" << classes[i].ClassDetail << std::endl <<
-                          "Ñ§·Ö£º" << classes[i].ClassScore << std::endl;
+                std::cout << "æ‰¾åˆ°ç¬¦åˆæ¡ä»¶çš„è¯¾ç¨‹ï¼Œæ˜¯å¦è¦åˆ é™¤ï¼Ÿ" << std::endl;
+                std::cout << "è¯¾ç¨‹å·ï¼š" << classes[i].ClassNO << std::endl <<
+                          "è¯¾ç¨‹åï¼š" << classes[i].ClassName << std::endl <<
+                          "è¯¾ç¨‹æè¿°ï¼š" << classes[i].ClassDetail << std::endl <<
+                          "å­¦åˆ†ï¼š" << classes[i].ClassScore << std::endl;
                 char t;
                 choose2:
-                std::cout << "ÇëÑ¡Ôñ£¨ÊäÈëY»òN£©:";
+                std::cout << "è¯·é€‰æ‹©ï¼ˆè¾“å…¥Yæˆ–Nï¼‰:";
                 std::cin >> t;
                 std::cin.get();
                 if(t == 'N'){
@@ -515,7 +515,7 @@ void delete2(){
                     }
                     output.close();
                 }else if(t != 'Y'&&t != 'N'){
-                    std::cout << "ÄúÊäÈëµÄ×ÖÄ¸ÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+                    std::cout << "æ‚¨è¾“å…¥çš„å­—æ¯æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                     goto choose2;
                 }else{
                 for (int count = i; classes[count].ClassNO != "\000"; count++) {
@@ -526,13 +526,13 @@ void delete2(){
                     State = 1;
                 }
                 i--;
-                std::cout << "¿Î³Ì³É¹¦É¾³ý" << std::endl;
+                std::cout << "è¯¾ç¨‹æˆåŠŸåˆ é™¤" << std::endl;
                 }
             }
         }
     }
     if (State == 0)
-    {std::cout << "Î´ÕÒµ½¶ÔÓ¦µÄ¿Î³Ì£¬ÇëÖØÐÂÊäÈë£¡" << std::endl;
+    {std::cout << "æœªæ‰¾åˆ°å¯¹åº”çš„è¯¾ç¨‹ï¼Œè¯·é‡æ–°è¾“å…¥ï¼" << std::endl;
         goto again;}
     open1.close();
     std::ofstream output("b");
@@ -558,35 +558,35 @@ void modify2(){
         std::getline(open1,classes[i].ClassDetail);
     }
     again:
-    std::cout << "Ï£ÍûÍ¨¹ýÄÇÖÖ·½Ê½²éÑ¯£¿[1]¿Î³ÌºÅ [2]¿Î³ÌÃû [3]Ñ§·Ö [4]¿Î³ÌÃèÊö :";
+    std::cout << "å¸Œæœ›é€šè¿‡é‚£ç§æ–¹å¼æŸ¥è¯¢ï¼Ÿ[1]è¯¾ç¨‹å· [2]è¯¾ç¨‹å [3]å­¦åˆ† [4]è¯¾ç¨‹æè¿° :";
     int t;
     std::cin >> t;
     std::cin.get();
     if (t<1||t>4){
-        std::cout << "ÊäÈëµÄÐòºÅÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+        std::cout << "è¾“å…¥çš„åºå·æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
         goto again;}else
-        std::cout << "ÇëÊäÈëÒªÐÞ¸ÄµÄ¿Î³ÌµÄ";
+        std::cout << "è¯·è¾“å…¥è¦ä¿®æ”¹çš„è¯¾ç¨‹çš„";
     std::string thisisastr;
     int xuefen = 0;
     switch (t){
         case 1:
-            std::cout << "¿Î³ÌºÅ ";
+            std::cout << "è¯¾ç¨‹å· ";
             std::getline(std::cin,thisisastr);
             break;
 
         case 2:
-            std::cout << "¿Î³ÌÃû ";
+            std::cout << "è¯¾ç¨‹å ";
             std::getline(std::cin,thisisastr);
             break;
 
         case 3:
-            std::cout << "Ñ§·Ö ";
+            std::cout << "å­¦åˆ† ";
             std::cin >> xuefen;
             std::cin.get();
             break;
 
         case 4:
-            std::cout << "¿Î³ÌÃèÊö£¨½öÏÞÒ»ÐÐ£¬ÒÔ»Ø³µ½áÊø£©";
+            std::cout << "è¯¾ç¨‹æè¿°ï¼ˆä»…é™ä¸€è¡Œï¼Œä»¥å›žè½¦ç»“æŸï¼‰";
             std::getline(std::cin,thisisastr);
             break;
 
@@ -595,13 +595,13 @@ void modify2(){
     int i;
     for (i = 0; classes[i].ClassNO != "\000"; i++) {
         if (classes[i].ClassNO == thisisastr || classes[i].ClassDetail == thisisastr || classes[i].ClassName == thisisastr || classes[i].ClassScore == xuefen) {
-                std::cout << "ÕÒµ½·ûºÏÌõ¼þµÄ¿Î³Ì£¬ÊÇ·ñÒªÐÞ¸Ä£¿" << std::endl;
-                std::cout << "¿Î³ÌÃû£º" << classes[i].ClassName << std::endl << "¿Î³ÌºÅ£º" << classes[i].ClassNO << std:: endl <<
-                          "¿Î³ÌÃèÊö£º" << classes[i].ClassDetail << std::endl <<
-                          "Ñ§·Ö£º" << classes[i].ClassScore << std::endl;
+                std::cout << "æ‰¾åˆ°ç¬¦åˆæ¡ä»¶çš„è¯¾ç¨‹ï¼Œæ˜¯å¦è¦ä¿®æ”¹ï¼Ÿ" << std::endl;
+                std::cout << "è¯¾ç¨‹åï¼š" << classes[i].ClassName << std::endl << "è¯¾ç¨‹å·ï¼š" << classes[i].ClassNO << std:: endl <<
+                          "è¯¾ç¨‹æè¿°ï¼š" << classes[i].ClassDetail << std::endl <<
+                          "å­¦åˆ†ï¼š" << classes[i].ClassScore << std::endl;
                 char t;
                 choose:
-                std::cout << "ÇëÑ¡Ôñ£¨ÊäÈëY»òN£©:";
+                std::cout << "è¯·é€‰æ‹©ï¼ˆè¾“å…¥Yæˆ–Nï¼‰:";
                 std::cin >> t;
                 std::cin.get();
                 if (t == 'N'){
@@ -616,34 +616,34 @@ void modify2(){
                     State = 1;
                     output.close();
                 }else if(t != 'Y'){
-                    std::cout << "ÄúÊäÈëµÄ×ÖÄ¸ÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+                    std::cout << "æ‚¨è¾“å…¥çš„å­—æ¯æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                     goto choose;
                 }else {
                     int choicee = 0;
-                    std::cout << "ÇëÊäÈëÒªÐÞ¸ÄµÄÄÚÈÝ¶ÔÓ¦µÄÐòºÅ£º[1]¿Î³ÌºÅ [2]¿Î³ÌÃû [3]Ñ§·Ö [4]¿Î³ÌÃèÊö£¨ÊäÈëÒ»¸öÊý×Ö£©£º";
+                    std::cout << "è¯·è¾“å…¥è¦ä¿®æ”¹çš„å†…å®¹å¯¹åº”çš„åºå·ï¼š[1]è¯¾ç¨‹å· [2]è¯¾ç¨‹å [3]å­¦åˆ† [4]è¯¾ç¨‹æè¿°ï¼ˆè¾“å…¥ä¸€ä¸ªæ•°å­—ï¼‰ï¼š";
                     std::cin >> choicee;
                     std::cin.get();
                     std::string neww;
                     switch (choicee) {
                         case 1:
-                            std::cout << "ÇëÊäÈëÐÂÄÚÈÝ£º";
+                            std::cout << "è¯·è¾“å…¥æ–°å†…å®¹ï¼š";
                             std::getline(std::cin,neww);
                             classes[i].ClassNO = neww;
                             break;
                         case 2:
-                            std::cout << "ÇëÊäÈëÐÂÄÚÈÝ£º";
+                            std::cout << "è¯·è¾“å…¥æ–°å†…å®¹ï¼š";
                             std::getline(std::cin,neww);
                             classes[i].ClassName = neww;
                             break;
                         case 3:
-                            std::cout << "ÇëÊäÈëÐÂÄÚÈÝ:";
+                            std::cout << "è¯·è¾“å…¥æ–°å†…å®¹:";
                             int ss;
                             std::cin >> ss;
                             std::cin.get();
                             classes[i].ClassScore = ss;
                             break;
                         case 4:
-                            std::cout << "ÇëÊäÈëÐÂÄÚÈÝ£º";
+                            std::cout << "è¯·è¾“å…¥æ–°å†…å®¹ï¼š";
                             std::getline(std::cin,neww);
                             classes[i].ClassDetail = neww;
                             break;
@@ -658,12 +658,12 @@ void modify2(){
                     }
                     State = 1;
                     output.close();
-                    std::cout << "¿Î³Ì³É¹¦ÐÞ¸Ä" << std::endl;
+                    std::cout << "è¯¾ç¨‹æˆåŠŸä¿®æ”¹" << std::endl;
                 }
             }
         }
     if (State == 0)
-    {std::cout << "Î´ÕÒµ½¶ÔÓ¦µÄ¿Î³Ì£¬ÇëÖØÐÂÊäÈë£¡" << std::endl;
+    {std::cout << "æœªæ‰¾åˆ°å¯¹åº”çš„è¯¾ç¨‹ï¼Œè¯·é‡æ–°è¾“å…¥ï¼" << std::endl;
         goto again;}
     open1.close();
     std::ofstream output("b");
@@ -689,35 +689,35 @@ void lookup2(){
         std::getline(open1,classes[i].ClassDetail);
     }
     again:
-    std::cout << "Ï£ÍûÍ¨¹ýÄÇÖÖ·½Ê½²éÑ¯£¿[1]¿Î³ÌºÅ [2]¿Î³ÌÃû [3]Ñ§·Ö [4]¿Î³ÌÃèÊö :";
+    std::cout << "å¸Œæœ›é€šè¿‡é‚£ç§æ–¹å¼æŸ¥è¯¢ï¼Ÿ[1]è¯¾ç¨‹å· [2]è¯¾ç¨‹å [3]å­¦åˆ† [4]è¯¾ç¨‹æè¿° :";
     int t;
     std::cin >> t;
     std::cin.get();
     if (t<1||t>4){
-        std::cout << "ÊäÈëµÄÐòºÅÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+        std::cout << "è¾“å…¥çš„åºå·æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
         goto again;}else
-        std::cout << "ÇëÊäÈëÒª²éÑ¯µÄ¿Î³ÌµÄ";
+        std::cout << "è¯·è¾“å…¥è¦æŸ¥è¯¢çš„è¯¾ç¨‹çš„";
     std::string thisisastr;
     int xuefen = 0;
     switch (t){
         case 1:
-            std::cout << "¿Î³ÌºÅ ";
+            std::cout << "è¯¾ç¨‹å· ";
             std::getline(std::cin,thisisastr);
             break;
 
         case 2:
-            std::cout << "¿Î³ÌÃû ";
+            std::cout << "è¯¾ç¨‹å ";
             std::getline(std::cin,thisisastr);
             break;
 
         case 3:
-            std::cout << "Ñ§·Ö ";
+            std::cout << "å­¦åˆ† ";
             std::cin >> xuefen;
             std::cin.get();
             break;
 
         case 4:
-            std::cout << "¿Î³ÌÃèÊö£¨½öÏÞÒ»ÐÐ£¬ÒÔ»Ø³µ½áÊø£©";
+            std::cout << "è¯¾ç¨‹æè¿°ï¼ˆä»…é™ä¸€è¡Œï¼Œä»¥å›žè½¦ç»“æŸï¼‰";
             std::getline(std::cin,thisisastr);
             break;
 
@@ -727,11 +727,11 @@ void lookup2(){
         int i;
         for (i = 0; classes[i].ClassNO != "\000"; i++) {
             if (classes[i].ClassNO == thisisastr || classes[i].ClassDetail == thisisastr || classes[i].ClassName == thisisastr) {
-                std::cout << "ÕÒµ½·ûºÏÌõ¼þµÄ¿Î³Ì" << std::endl;
-                std::cout << "¿Î³ÌÃû£º" << classes[i].ClassName << std::endl << "¿Î³ÌºÅ£º" << classes[i].ClassNO << std:: endl <<
-                          "¿Î³ÌÃèÊö£º" << classes[i].ClassDetail << std::endl <<
-                          "Ñ§·Ö£º" << classes[i].ClassScore << std::endl;
-                std::cout << "Çë°´»Ø³µ¼ü¼ÌÐø......";
+                std::cout << "æ‰¾åˆ°ç¬¦åˆæ¡ä»¶çš„è¯¾ç¨‹" << std::endl;
+                std::cout << "è¯¾ç¨‹åï¼š" << classes[i].ClassName << std::endl << "è¯¾ç¨‹å·ï¼š" << classes[i].ClassNO << std:: endl <<
+                          "è¯¾ç¨‹æè¿°ï¼š" << classes[i].ClassDetail << std::endl <<
+                          "å­¦åˆ†ï¼š" << classes[i].ClassScore << std::endl;
+                std::cout << "è¯·æŒ‰å›žè½¦é”®ç»§ç»­......";
                 std::string temp;
                 std::getline(std::cin,temp) ;
                 State = 1;
@@ -741,12 +741,12 @@ void lookup2(){
         int i;
         for (i = 0; classes[i].ClassNO != "\000"; i++) {
             if (classes[i].ClassScore == xuefen) {
-                std::cout << "ÕÒµ½·ûºÏÌõ¼þµÄ¿Î³Ì" << std::endl;
-                std::cout << "¿Î³ÌºÅ£º" << classes[i].ClassNO << std::endl <<
-                          "¿Î³ÌÃû£º" << classes[i].ClassName << std::endl <<
-                          "¿Î³ÌÃèÊö£º" << classes[i].ClassDetail << std::endl <<
-                          "Ñ§·Ö£º" << classes[i].ClassScore << std::endl;
-                std::cout << "Çë°´»Ø³µ¼ü¼ÌÐø......";
+                std::cout << "æ‰¾åˆ°ç¬¦åˆæ¡ä»¶çš„è¯¾ç¨‹" << std::endl;
+                std::cout << "è¯¾ç¨‹å·ï¼š" << classes[i].ClassNO << std::endl <<
+                          "è¯¾ç¨‹åï¼š" << classes[i].ClassName << std::endl <<
+                          "è¯¾ç¨‹æè¿°ï¼š" << classes[i].ClassDetail << std::endl <<
+                          "å­¦åˆ†ï¼š" << classes[i].ClassScore << std::endl;
+                std::cout << "è¯·æŒ‰å›žè½¦é”®ç»§ç»­......";
                 std::string temp;
                 std::getline(std::cin,temp) ;
                 State = 1;
@@ -754,7 +754,7 @@ void lookup2(){
         }
     }
     if (State == 0)
-    {std::cout << "Î´ÕÒµ½¶ÔÓ¦µÄ¿Î³Ì£¬ÇëÖØÐÂÊäÈë£¡" << std::endl;
+    {std::cout << "æœªæ‰¾åˆ°å¯¹åº”çš„è¯¾ç¨‹ï¼Œè¯·é‡æ–°è¾“å…¥ï¼" << std::endl;
         goto again;}
     return;
 }
@@ -766,33 +766,33 @@ void tianjia3(){
     read2.close();
     std::fstream read1;
     read1.open("c",std::fstream::app);
-    std::cout << "ÇëÊäÈëÑ§ºÅ£º";
+    std::cout << "è¯·è¾“å…¥å­¦å·ï¼š";
     {
         std::string xuehao;
         loop1:
         std::getline(std::cin,xuehao);
 //        for (int i = 0;grades[i].StuNum != "\000";i++){
 //            if (xuehao == grades[i].StuNum) {
-//                std::cout << "Ñ§ºÅÖØ¸´£¬ÇëÖØÐÂÊäÈë£¡";
+//                std::cout << "å­¦å·é‡å¤ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
 //                goto loop1;
 //            }
 //        }
         read1 << xuehao << std::endl;
     }
-    std::cout << "ÇëÊäÈë¿Î³ÌºÅ£º";
+    std::cout << "è¯·è¾“å…¥è¯¾ç¨‹å·ï¼š";
     {
         std::string Name;
         loop2:
         std::getline(std::cin,Name);
         for (int i = 0;grades[i].StuNum != "\000";i++){
             if (Name == grades[i].ClassNO) {
-                std::cout << "¿Î³ÌºÅÖØ¸´£¬ÇëÖØÐÂÊäÈë£¡";
+                std::cout << "è¯¾ç¨‹å·é‡å¤ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                 goto loop2;
             }
         }
         read1 << Name << std::endl;
     }
-    std::cout << "ÇëÊäÈë³É¼¨£¨ÕûÊý£©£º";
+    std::cout << "è¯·è¾“å…¥æˆç»©ï¼ˆæ•´æ•°ï¼‰ï¼š";
     {
         double Xuefen;
         loop3:
@@ -800,13 +800,13 @@ void tianjia3(){
         std::cin.get();
 //        for (int i = 0;grades[i].StuNum != "\000";i++){
 //            if (Xuefen == grades[i].ClassScore) {
-//                std::cout << "³É¼¨ÖØ¸´£¬ÇëÖØÐÂÊäÈë£¡";
+//                std::cout << "æˆç»©é‡å¤ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
 //                goto loop3;
 //            }
 //        }
         read1 << Xuefen << std::endl;
     }
-    std::cout << "ÐÅÏ¢Â¼Èë³É¹¦£¬¼´½«·µ»ØÖ÷²Ëµ¥";
+    std::cout << "ä¿¡æ¯å½•å…¥æˆåŠŸï¼Œå³å°†è¿”å›žä¸»èœå•";
     read1.close();
 }
 
@@ -814,29 +814,29 @@ void delete3(){
     std::ifstream open1("c");
     readGradeinfo(open1);
     again:
-    std::cout << "Ï£ÍûÍ¨¹ýÄÇÖÖ·½Ê½²éÑ¯£¿[1]Ñ§ºÅ [2]¿Î³ÌºÅ [3]³É¼¨ :";
+    std::cout << "å¸Œæœ›é€šè¿‡é‚£ç§æ–¹å¼æŸ¥è¯¢ï¼Ÿ[1]å­¦å· [2]è¯¾ç¨‹å· [3]æˆç»© :";
     int t;
     std::cin >> t;
     std::cin.get();
     if (t<1||t>3){
-        std::cout << "ÊäÈëµÄÐòºÅÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+        std::cout << "è¾“å…¥çš„åºå·æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
         goto again;}else
-        std::cout << "ÇëÊäÈëÒªÉ¾³ýµÄ³É¼¨µÄ";
+        std::cout << "è¯·è¾“å…¥è¦åˆ é™¤çš„æˆç»©çš„";
     std::string thisisastr;
     int xuefen = 0;
     switch (t){
         case 1:
-            std::cout << "Ñ§ºÅ ";
+            std::cout << "å­¦å· ";
             std::getline(std::cin,thisisastr);
             break;
 
         case 2:
-            std::cout << "¿Î³ÌºÅ ";
+            std::cout << "è¯¾ç¨‹å· ";
             std::getline(std::cin,thisisastr);
             break;
 
         case 3:
-            std::cout << "³É¼¨ ";
+            std::cout << "æˆç»© ";
             std::cin >> xuefen;
             std::cin.get();
             break;
@@ -847,13 +847,13 @@ void delete3(){
         int i;
         for (i = 0; grades[i].ClassNO != "\000"; i++) {
             if (grades[i].ClassNO == thisisastr || grades[i].StuNum == thisisastr) {
-                std::cout << "ÕÒµ½·ûºÏÌõ¼þµÄ³É¼¨£¬ÊÇ·ñÒªÉ¾³ý£¿" << std::endl;
-                std::cout << "Ñ§ºÅ£º" << grades[i].StuNum << std::endl <<
-                          "¿Î³ÌºÅ£º" << grades[i].ClassNO << std::endl <<
-                          "³É¼¨£º" << grades[i].ClassScore << std::endl;
+                std::cout << "æ‰¾åˆ°ç¬¦åˆæ¡ä»¶çš„æˆç»©ï¼Œæ˜¯å¦è¦åˆ é™¤ï¼Ÿ" << std::endl;
+                std::cout << "å­¦å·ï¼š" << grades[i].StuNum << std::endl <<
+                          "è¯¾ç¨‹å·ï¼š" << grades[i].ClassNO << std::endl <<
+                          "æˆç»©ï¼š" << grades[i].ClassScore << std::endl;
                 char t;
                 choose:
-                std::cout << "ÇëÑ¡Ôñ£¨ÊäÈëY»òN£©:";
+                std::cout << "è¯·é€‰æ‹©ï¼ˆè¾“å…¥Yæˆ–Nï¼‰:";
                 std::cin >> t;
                 std::cin.get();
                 if(t == 'N'){
@@ -867,7 +867,7 @@ void delete3(){
                     }
                     output.close();
                 }else if(t != 'Y'){
-                    std::cout << "ÄúÊäÈëµÄ×ÖÄ¸ÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+                    std::cout << "æ‚¨è¾“å…¥çš„å­—æ¯æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                     goto choose;
                 }else {
                     for (int count = i; grades[count].ClassNO != "\000"; count++) {
@@ -877,7 +877,7 @@ void delete3(){
                         State = 1;
                     }
                     i--;
-                    std::cout << "¿Î³Ì³É¹¦É¾³ý" << std::endl;
+                    std::cout << "è¯¾ç¨‹æˆåŠŸåˆ é™¤" << std::endl;
                 }
             }
         }
@@ -885,13 +885,13 @@ void delete3(){
         int i;
         for (i = 0; grades[i].ClassNO != "\000"; i++) {
             if (grades[i].ClassScore == xuefen) {
-                std::cout << "ÕÒµ½·ûºÏÌõ¼þµÄ¿Î³Ì£¬ÊÇ·ñÒªÉ¾³ý£¿" << std::endl;
-                std::cout << "Ñ§ºÅ£º" << grades[i].StuNum << std::endl <<
-                          "¿Î³ÌºÅ£º" << grades[i].ClassNO << std::endl <<
-                          "³É¼¨£º" << grades[i].ClassScore << std::endl;
+                std::cout << "æ‰¾åˆ°ç¬¦åˆæ¡ä»¶çš„è¯¾ç¨‹ï¼Œæ˜¯å¦è¦åˆ é™¤ï¼Ÿ" << std::endl;
+                std::cout << "å­¦å·ï¼š" << grades[i].StuNum << std::endl <<
+                          "è¯¾ç¨‹å·ï¼š" << grades[i].ClassNO << std::endl <<
+                          "æˆç»©ï¼š" << grades[i].ClassScore << std::endl;
                 char t;
                 choose2:
-                std::cout << "ÇëÑ¡Ôñ£¨ÊäÈëY»òN£©:";
+                std::cout << "è¯·é€‰æ‹©ï¼ˆè¾“å…¥Yæˆ–Nï¼‰:";
                 std::cin >> t;
                 std::cin.get();
                 if(t == 'N'){
@@ -905,7 +905,7 @@ void delete3(){
                     }
                     output.close();
                 }else if(t != 'Y'&&t != 'N'){
-                    std::cout << "ÄúÊäÈëµÄ×ÖÄ¸ÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+                    std::cout << "æ‚¨è¾“å…¥çš„å­—æ¯æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                     goto choose2;
                 }else{
                     for (int count = i; grades[count].ClassNO != "\000"; count++) {
@@ -915,13 +915,13 @@ void delete3(){
                         State = 1;
                     }
                     i--;
-                    std::cout << "¿Î³Ì³É¹¦É¾³ý" << std::endl;
+                    std::cout << "è¯¾ç¨‹æˆåŠŸåˆ é™¤" << std::endl;
                 }
             }
         }
     }
     if (State == 0)
-    {std::cout << "Î´ÕÒµ½¶ÔÓ¦µÄ³É¼¨£¬ÇëÖØÐÂÊäÈë£¡" << std::endl;
+    {std::cout << "æœªæ‰¾åˆ°å¯¹åº”çš„æˆç»©ï¼Œè¯·é‡æ–°è¾“å…¥ï¼" << std::endl;
         goto again;}
     open1.close();
     std::ofstream output("c");
@@ -937,29 +937,29 @@ void modify3(){
     std::ifstream open1("c");
     readGradeinfo(open1);
     again:
-    std::cout << "Ï£ÍûÍ¨¹ýÄÇÖÖ·½Ê½²éÑ¯£¿[1]Ñ§ºÅ [2]¿Î³ÌºÅ [3]³É¼¨:";
+    std::cout << "å¸Œæœ›é€šè¿‡é‚£ç§æ–¹å¼æŸ¥è¯¢ï¼Ÿ[1]å­¦å· [2]è¯¾ç¨‹å· [3]æˆç»©:";
     int t;
     std::cin >> t;
     std::cin.get();
     if (t<1||t>3){
-        std::cout << "ÊäÈëµÄÐòºÅÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+        std::cout << "è¾“å…¥çš„åºå·æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
         goto again;}else
-        std::cout << "ÇëÊäÈëÒªÐÞ¸ÄµÄ¿Î³ÌµÄ";
+        std::cout << "è¯·è¾“å…¥è¦ä¿®æ”¹çš„è¯¾ç¨‹çš„";
     std::string thisisastr;
     int xuefen = 0;
     switch (t) {
         case 1:
-            std::cout << "Ñ§ºÅ ";
+            std::cout << "å­¦å· ";
             std::getline(std::cin, thisisastr);
             break;
 
         case 2:
-            std::cout << "¿Î³ÌºÅ ";
+            std::cout << "è¯¾ç¨‹å· ";
             std::getline(std::cin, thisisastr);
             break;
 
         case 3:
-            std::cout << "³É¼¨ ";
+            std::cout << "æˆç»© ";
             std::cin >> xuefen;
             std::cin.get();
             break;
@@ -969,13 +969,13 @@ void modify3(){
     int i;
     for (i = 0; grades[i].ClassNO != "\000"; i++) {
         if (grades[i].ClassNO == thisisastr || grades[i].StuNum == thisisastr || grades[i].ClassScore == xuefen) {
-            std::cout << "ÕÒµ½·ûºÏÌõ¼þµÄ³É¼¨£¬ÊÇ·ñÒªÐÞ¸Ä£¿" << std::endl;
-            std::cout <<  "Ñ§ºÅ£º" << grades[i].StuNum << std::endl <<
-                      "¿Î³ÌºÅ£º" << grades[i].ClassNO << std::endl <<
-                      "³É¼¨£º" << grades[i].ClassScore << std::endl;
+            std::cout << "æ‰¾åˆ°ç¬¦åˆæ¡ä»¶çš„æˆç»©ï¼Œæ˜¯å¦è¦ä¿®æ”¹ï¼Ÿ" << std::endl;
+            std::cout <<  "å­¦å·ï¼š" << grades[i].StuNum << std::endl <<
+                      "è¯¾ç¨‹å·ï¼š" << grades[i].ClassNO << std::endl <<
+                      "æˆç»©ï¼š" << grades[i].ClassScore << std::endl;
             char t;
             choose:
-            std::cout << "ÇëÑ¡Ôñ£¨ÊäÈëY»òN£©:";
+            std::cout << "è¯·é€‰æ‹©ï¼ˆè¾“å…¥Yæˆ–Nï¼‰:";
             std::cin >> t;
             std::cin.get();
             if (t == 'N'){
@@ -989,44 +989,44 @@ void modify3(){
                 State = 1;
                 output.close();
             }else if(t != 'Y'){
-                std::cout << "ÄúÊäÈëµÄ×ÖÄ¸ÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+                std::cout << "æ‚¨è¾“å…¥çš„å­—æ¯æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                 goto choose;
             }else {
                 int choicee = 0;
-                std::cout << "ÇëÊäÈëÒªÐÞ¸ÄµÄÄÚÈÝ¶ÔÓ¦µÄÐòºÅ£º[1]Ñ§ºÅ [2]¿Î³ÌºÅ [3]³É¼¨£¨ÊäÈëÒ»¸öÊý×Ö£©£º";
+                std::cout << "è¯·è¾“å…¥è¦ä¿®æ”¹çš„å†…å®¹å¯¹åº”çš„åºå·ï¼š[1]å­¦å· [2]è¯¾ç¨‹å· [3]æˆç»©ï¼ˆè¾“å…¥ä¸€ä¸ªæ•°å­—ï¼‰ï¼š";
                 std::cin >> choicee;
                 std::cin.get();
                 std::string neww;
                 loop2:
                 switch (choicee) {
                     case 1:{
-                        std::cout << "ÇëÊäÈëÐÂÄÚÈÝ£º";
+                        std::cout << "è¯·è¾“å…¥æ–°å†…å®¹ï¼š";
                         std::getline(std::cin,neww);
                         for (int count = 0;grades[count].ClassNO != "\000";count++) {
                             if (neww == grades[count].StuNum){
-                                std::cout << "ÊäÈëµÄÄÚÈÝ²»ÄÜÖØ¸´£¬ÇëÖØÐÂÊäÈë£¡";
+                                std::cout << "è¾“å…¥çš„å†…å®¹ä¸èƒ½é‡å¤ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                                 goto loop2;}
                         }
                         grades[i].StuNum = neww;
                         break;}
                     case 2:{
-                        std::cout << "ÇëÊäÈëÐÂÄÚÈÝ£º";
+                        std::cout << "è¯·è¾“å…¥æ–°å†…å®¹ï¼š";
                         std::getline(std::cin,neww);
                         for (int count = 0;grades[count].ClassNO != "\000";count++) {
                             if (neww == grades[count].ClassNO){
-                                std::cout << "ÊäÈëµÄÄÚÈÝ²»ÄÜÖØ¸´£¬ÇëÖØÐÂÊäÈë£¡";
+                                std::cout << "è¾“å…¥çš„å†…å®¹ä¸èƒ½é‡å¤ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                                 goto loop2;}
                         }
                         grades[i].ClassNO = neww;
                         break;}
                     case 3:{
-                        std::cout << "ÇëÊäÈëÐÂÄÚÈÝ:";
+                        std::cout << "è¯·è¾“å…¥æ–°å†…å®¹:";
                         int ss;
                         std::cin >> ss;
                         std::cin.get();
                         for (int count = 0;grades[count].ClassNO != "\000";count++) {
                             if (ss == grades[count].ClassScore){
-                                std::cout << "ÊäÈëµÄÄÚÈÝ²»ÄÜÖØ¸´£¬ÇëÖØÐÂÊäÈë£¡";
+                                std::cout << "è¾“å…¥çš„å†…å®¹ä¸èƒ½é‡å¤ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
                                 goto loop2;}
                         }
                         grades[i].ClassScore = ss;
@@ -1041,12 +1041,12 @@ void modify3(){
                 }
                 State = 1;
                 output.close();
-                std::cout << "³É¼¨³É¹¦ÐÞ¸Ä" << std::endl;
+                std::cout << "æˆç»©æˆåŠŸä¿®æ”¹" << std::endl;
             }
         }
     }
     if (State == 0)
-    {std::cout << "Î´ÕÒµ½¶ÔÓ¦µÄ³É¼¨£¬ÇëÖØÐÂÊäÈë£¡" << std::endl;
+    {std::cout << "æœªæ‰¾åˆ°å¯¹åº”çš„æˆç»©ï¼Œè¯·é‡æ–°è¾“å…¥ï¼" << std::endl;
         goto again;}
     open1.close();
     std::ofstream output("c");
@@ -1064,29 +1064,29 @@ void lookup3(){
     std::ifstream open1("c");
     readGradeinfo(open1);
     again:
-    std::cout << "Ï£ÍûÍ¨¹ýÄÇÖÖ·½Ê½²éÑ¯£¿[1]Ñ§ºÅ [2]¿Î³ÌºÅ [3]³É¼¨ :";
+    std::cout << "å¸Œæœ›é€šè¿‡é‚£ç§æ–¹å¼æŸ¥è¯¢ï¼Ÿ[1]å­¦å· [2]è¯¾ç¨‹å· [3]æˆç»© :";
     int t;
     std::cin >> t;
     std::cin.get();
     if (t<1||t>3){
-        std::cout << "ÊäÈëµÄÐòºÅÓÐÎó£¬ÇëÖØÐÂÊäÈë£¡";
+        std::cout << "è¾“å…¥çš„åºå·æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼";
         goto again;}else
-        std::cout << "ÇëÊäÈëÒª²éÑ¯µÄ³É¼¨µÄ";
+        std::cout << "è¯·è¾“å…¥è¦æŸ¥è¯¢çš„æˆç»©çš„";
     std::string thisisastr;
     int xuefen = 0;
     switch (t){
         case 1:
-            std::cout << "Ñ§ºÅ ";
+            std::cout << "å­¦å· ";
             std::getline(std::cin,thisisastr);
             break;
 
         case 2:
-            std::cout << "¿Î³ÌºÅ ";
+            std::cout << "è¯¾ç¨‹å· ";
             std::getline(std::cin,thisisastr);
             break;
 
         case 3:
-            std::cout << "³É¼¨ ";
+            std::cout << "æˆç»© ";
             std::cin >> xuefen;
             std::cin.get();
             break;
@@ -1097,16 +1097,16 @@ void lookup3(){
         int i;
         for (i = 0; grades[i].ClassNO != "\000"; i++) {
             if (grades[i].ClassNO == thisisastr || grades[i].StuNum == thisisastr ) {
-                std::cout << "ÕÒµ½·ûºÏÌõ¼þµÄ³É¼¨" << std::endl;
-                std::cout << "Ñ§ºÅ£º" << grades[i].StuNum << std::endl <<
-                          "¿Î³ÌºÅ£º" << grades[i].ClassNO << std::endl <<
-                          "³É¼¨£º" << grades[i].ClassScore << std::endl;
+                std::cout << "æ‰¾åˆ°ç¬¦åˆæ¡ä»¶çš„æˆç»©" << std::endl;
+                std::cout << "å­¦å·ï¼š" << grades[i].StuNum << std::endl <<
+                          "è¯¾ç¨‹å·ï¼š" << grades[i].ClassNO << std::endl <<
+                          "æˆç»©ï¼š" << grades[i].ClassScore << std::endl;
                 std::string classno = grades[i].ClassNO;
                 for (int i = 0;classes[i].ClassNO != "\000";i++){
                     if (classes[i].ClassNO == classno)
-                        std::cout << "¿Î³ÌÃû£º" << classes[i].ClassName << std::endl;
+                        std::cout << "è¯¾ç¨‹åï¼š" << classes[i].ClassName << std::endl;
                 }
-                std::cout << "Çë°´»Ø³µ¼ü¼ÌÐø......";
+                std::cout << "è¯·æŒ‰å›žè½¦é”®ç»§ç»­......";
                 std::string temp;
                 std::getline(std::cin,temp) ;
                 State = 1;
@@ -1117,16 +1117,16 @@ void lookup3(){
         int i;
         for (i = 0; grades[i].ClassNO != "\000"; i++) {
             if (grades[i].ClassScore == xuefen) {
-                std::cout << "ÕÒµ½·ûºÏÌõ¼þµÄ³É¼¨" << std::endl;
-                std::cout << "Ñ§ºÅ£º" << grades[i].StuNum << std::endl <<
-                          "¿Î³ÌºÅ£º" << grades[i].ClassNO << std::endl ;
+                std::cout << "æ‰¾åˆ°ç¬¦åˆæ¡ä»¶çš„æˆç»©" << std::endl;
+                std::cout << "å­¦å·ï¼š" << grades[i].StuNum << std::endl <<
+                          "è¯¾ç¨‹å·ï¼š" << grades[i].ClassNO << std::endl ;
                 std::string classno = grades[i].ClassNO;
                 for (int i = 0;classes[i].ClassNO != "\000";i++){
                     if (classes[i].ClassNO == classno)
-                        std::cout << "¿Î³ÌÃû£º" << classes[i].ClassName << std::endl;
+                        std::cout << "è¯¾ç¨‹åï¼š" << classes[i].ClassName << std::endl;
                 }
-                          std::cout << "³É¼¨£º" << grades[i].ClassScore << std::endl;
-                std::cout << "Çë°´»Ø³µ¼ü¼ÌÐø......";
+                          std::cout << "æˆç»©ï¼š" << grades[i].ClassScore << std::endl;
+                std::cout << "è¯·æŒ‰å›žè½¦é”®ç»§ç»­......";
                 std::string temp;
                 std::getline(std::cin,temp) ;
                 State = 1;
@@ -1134,7 +1134,7 @@ void lookup3(){
         }
     }
     if (State == 0)
-    {std::cout << "Î´ÕÒµ½¶ÔÓ¦µÄ¿Î³Ì£¬ÇëÖØÐÂÊäÈë£¡" << std::endl;
+    {std::cout << "æœªæ‰¾åˆ°å¯¹åº”çš„è¯¾ç¨‹ï¼Œè¯·é‡æ–°è¾“å…¥ï¼" << std::endl;
         goto again;}
     return;
 }
@@ -1157,14 +1157,14 @@ void outputscore1(Stuinformation (&Stuinfo)[100]) {
     for (int i = 0; classes[i].ClassNO != "\000"; i++) {
         sumxuefen += classes[i].ClassScore;
     }
-    std::cout << "ÇëÊäÈëÑ§ÉúµÄ[1]ÐÕÃû »ò[2]Ñ§ºÅ£º";
+    std::cout << "è¯·è¾“å…¥å­¦ç”Ÿçš„[1]å§“å æˆ–[2]å­¦å·ï¼š";
     int choice;
     std::cin >> choice;
     std::cin.get();
     std::string StuNumber;
     if (choice == 1) {
         int count = 0;
-        std::cout << "ÇëÊäÈëÑ§ÉúµÄÐÕÃû£º";
+        std::cout << "è¯·è¾“å…¥å­¦ç”Ÿçš„å§“åï¼š";
         std::string StuName;
         std::getline(std::cin, StuName);
         int FoundNamesame[100];
@@ -1176,19 +1176,19 @@ void outputscore1(Stuinformation (&Stuinfo)[100]) {
             }
         }
         if (count == 0) {
-            std::cout << "Ã»ÕÒµ½¹þ";
+            std::cout << "æ²¡æ‰¾åˆ°å“ˆ";
             return;
         } else if (count > 1) {
-            std::cout << "¹²ÕÒµ½" << count << "¸ö½á¹û£¬ÄÄ¸öÊÇÏëÒª²éÑ¯µÄÍ¬Ñ§£¿" << std::endl;
+            std::cout << "å…±æ‰¾åˆ°" << count << "ä¸ªç»“æžœï¼Œå“ªä¸ªæ˜¯æƒ³è¦æŸ¥è¯¢çš„åŒå­¦ï¼Ÿ" << std::endl;
             for (int temp2 = 0; temp2 <= count; temp2++) {
-                std::cout << "µÚ" << temp2 + 1 << "¸öÍ¬Ñ§";
-                std::cout << std::endl << "Ñ§ºÅ£º" << students[FoundNamesame[temp2]].StuNum;
-                std::cout << std::endl << "ÐÕÃû: " << students[FoundNamesame[temp2]].StuName;
-                std::cout << std::endl << "°à¼¶£º" << students[FoundNamesame[temp2]].StuClass;
-                std::cout << std::endl << "ÐÔ±ð£º";
-                if (students[FoundNamesame[temp2]].StuSex == 'm') std::cout << "ÄÐ";
-                else std::cout << "Å®";
-                std::cout << std::endl << "×¨Òµ£º" << students[FoundNamesame[temp2]].StuMajor << std::endl << std::endl;
+                std::cout << "ç¬¬" << temp2 + 1 << "ä¸ªåŒå­¦";
+                std::cout << std::endl << "å­¦å·ï¼š" << students[FoundNamesame[temp2]].StuNum;
+                std::cout << std::endl << "å§“å: " << students[FoundNamesame[temp2]].StuName;
+                std::cout << std::endl << "ç­çº§ï¼š" << students[FoundNamesame[temp2]].StuClass;
+                std::cout << std::endl << "æ€§åˆ«ï¼š";
+                if (students[FoundNamesame[temp2]].StuSex == 'm') std::cout << "ç”·";
+                else std::cout << "å¥³";
+                std::cout << std::endl << "ä¸“ä¸šï¼š" << students[FoundNamesame[temp2]].StuMajor << std::endl << std::endl;
             }
             int who;
             std::cin >> who;
@@ -1196,7 +1196,7 @@ void outputscore1(Stuinformation (&Stuinfo)[100]) {
             StuNumber = students[FoundNamesame[0]].StuNum;
         }
     }else {
-        std::cout << "ÇëÊäÈëÑ§ºÅ£º";
+        std::cout << "è¯·è¾“å…¥å­¦å·ï¼š";
         std::getline(std::cin, StuNumber);}
     std::ifstream Stu_Scores;
     Stu_Scores.open("c");
@@ -1208,7 +1208,7 @@ void outputscore1(Stuinformation (&Stuinfo)[100]) {
             i++;
             int k;
             std::cout << grades[countNum].ClassNO << " " ;
-            std::cout << grades[countNum].ClassScore << "    " << "Ñ§·Ö¼¨µã£º" << calcu_GPA(grades[countNum].ClassScore)  << "  ";
+            std::cout << grades[countNum].ClassScore << "    " << "å­¦åˆ†ç»©ç‚¹ï¼š" << calcu_GPA(grades[countNum].ClassScore)  << "  ";
             for (int count = 0;classes[count].ClassNO != "\000";count++){
                 if (classes[count].ClassNO == grades[countNum].ClassNO)
                     std::cout << classes[count].ClassName << "  ";
@@ -1216,7 +1216,7 @@ void outputscore1(Stuinformation (&Stuinfo)[100]) {
             std::cout << std::endl;
             for (k = 0;classes[k].ClassNO !=grades[countNum].ClassNO;k++) { ;
             }
-            chengji[i] = calcu_GPA(grades[countNum].ClassScore) * classes[k].ClassScore ; //ÕâÒ»¿ÆÄ¿µÄÆ½¾ù¼¨µã
+            chengji[i] = calcu_GPA(grades[countNum].ClassScore) * classes[k].ClassScore ; //è¿™ä¸€ç§‘ç›®çš„å¹³å‡ç»©ç‚¹
 
         }
     }
@@ -1225,7 +1225,7 @@ void outputscore1(Stuinformation (&Stuinfo)[100]) {
         chengjisum += chengji[i];
     }
     double avr_GPA = chengjisum / sumxuefen;
-            std::cout << "¸ÃÑ§ÉúµÄÑ§·Ö¼¨µãÎª£º" << avr_GPA << std::endl;
+            std::cout << "è¯¥å­¦ç”Ÿçš„å­¦åˆ†ç»©ç‚¹ä¸ºï¼š" << avr_GPA << std::endl;
 }
 
 double calculateGPA(std::string &stu_num,int Sumxuefen){
@@ -1282,7 +1282,7 @@ void Rankings(){
         double GPAs = 0.0;
     };
     StuScore students_scores[100] = {{"\000",0.0}};
-    std::cout << "ÇëÎÊÒª²éÑ¯ÄÄ¸ö×¨ÒµµÄÍ¬Ñ§µÄ³É¼¨£¿" ;
+    std::cout << "è¯·é—®è¦æŸ¥è¯¢å“ªä¸ªä¸“ä¸šçš„åŒå­¦çš„æˆç»©ï¼Ÿ" ;
     std::string Major;
     std::getline(std::cin,Major);
     std::ifstream classinfo; //calculate  sumXuefen
@@ -1294,7 +1294,7 @@ void Rankings(){
         sumxuefen += classes[i].ClassScore;
     }
     int countt = -1,state = 0;
-    for (int i = 0;students[i].StuNum !=  "\000";i++){  //´ÓÈËÃû²áÖÐÕÒµ½¸Ã×¨ÒµµÄÑ§Éú²¢¼ÆËã³ö¸ÃÑ§ÉúµÄ¼¨µã
+    for (int i = 0;students[i].StuNum !=  "\000";i++){  //ä»Žäººåå†Œä¸­æ‰¾åˆ°è¯¥ä¸“ä¸šçš„å­¦ç”Ÿå¹¶è®¡ç®—å‡ºè¯¥å­¦ç”Ÿçš„ç»©ç‚¹
         if (students[i].StuMajor == Major){
             countt++;
             students_scores[countt].GPAs =  calculateGPA(students[i].StuNum,sumxuefen);
@@ -1303,7 +1303,7 @@ void Rankings(){
         }
     }
     if (state == 0){
-        std::cout << "Ã»ÓÐÕÒµ½ÏàÓ¦µÄÑ§Éú£¡" << std::endl;
+        std::cout << "æ²¡æœ‰æ‰¾åˆ°ç›¸åº”çš„å­¦ç”Ÿï¼" << std::endl;
         return;
     }
     int count = 0;
@@ -1326,7 +1326,7 @@ void Rankings(){
         }
     }
 
-    std::cout << "ÐòºÅ" << "  " << "Ñ§ºÅ" << "    " << "ÐÕÃû" << "    " << "°à¼¶"  << "     " << "¼¨µã" << "   " << "ÅÅÃû" << std::endl;
+    std::cout << "åºå·" << "  " << "å­¦å·" << "    " << "å§“å" << "    " << "ç­çº§"  << "     " << "ç»©ç‚¹" << "   " << "æŽ’å" << std::endl;
     int cunt = 0;
     for (int i = 0;students_scores[i].GPAs != 0.0;i++) {
         std::cout << i + 1 << "    " << students_scores[i].StuN << "  " << WhatYourName(students_scores[i].StuN)  ;
